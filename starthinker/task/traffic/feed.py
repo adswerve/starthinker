@@ -126,7 +126,7 @@ class FieldMap:
   PLACEMENT_START_DATE = 'Placement Start Date'
   PLACEMENT_END_DATE = 'Placement End Date'
   PLACEMENT_TYPE = 'Type'
-  PLACEMENT_ARCHIVED = 'Archived'
+  PLACEMENT_ACTIVE_STATUS = 'Active Status'
   PLACEMENT_ACTIVE_VIEW_AND_VERIFICATION = 'Active View and Verification'
   PLACEMENT_AD_BLOCKING = 'Ad Blocking'
   PLACEMENT_PRICING_TESTING_START = 'Pricing Schedule Testing Starts'

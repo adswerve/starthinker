@@ -222,9 +222,9 @@ class PlacementDAO(BaseDAO):
     item['name'] = feed_item.get(FieldMap.PLACEMENT_NAME,
                                  None) if feed_item.get(FieldMap.PLACEMENT_NAME,
                                                         '') else item['name']
-    item['archived'] = feed_item.get(
-        FieldMap.PLACEMENT_ARCHIVED, None) if feed_item.get(
-            FieldMap.PLACEMENT_ARCHIVED, '') else item['archived']
+    item['activeStatus'] = feed_item.get(
+        FieldMap.PLACEMENT_ACTIVE_STATUS, None) if feed_item.get(
+            FieldMap.PLACEMENT_ACTIVE_STATUS, '') else item['activeStatus']
     item['adBlockingOptOut'] = feed_item.get(FieldMap.PLACEMENT_AD_BLOCKING,
                                              False)
 
@@ -320,8 +320,9 @@ class PlacementDAO(BaseDAO):
             campaign['id'],
         'placementGroupId':
             placement_group['id'] if placement_group else None,
-        'archived':
-            feed_item.get(FieldMap.PLACEMENT_ARCHIVED, False),
+        'activeStatus':
+            feed_item.get(FieldMap.PLACEMENT_ACTIVE_STATUS, "PLACEMENT_STATUS_ACTIVE"),  # default for "archived" was False, now default is "active"
+            # options for default: PLACEMENT_STATUS_UNKNOWN, PLACEMENT_STATUS_ACTIVE, PLACEMENT_STATUS_INACTIVE, PLACEMENT_STATUS_ARCHIVED, PLACEMENT_STATUS_PERMANENTLY_ARCHIVED
         'siteId':
             feed_item.get(FieldMap.SITE_ID, None),
         'paymentSource':
