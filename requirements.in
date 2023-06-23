@@ -17,7 +17,7 @@
 ###########################################################################
 
 # starthinker
-google-api-python-client
+google-api-python-client==2.70.0
 google-auth
 google-auth-oauthlib
 google-auth-httplib2
