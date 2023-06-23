@@ -24,7 +24,7 @@ from setuptools import find_packages
 from setuptools import setup
 
 REQUIREMENTS = [
-    'google-api-python-client',
+    'google-api-python-client==2.89.0',  # breaking change with v2.90.0
     'google-auth',
     'google-auth-oauthlib',
     'google-auth-httplib2',
