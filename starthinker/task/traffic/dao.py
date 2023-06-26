@@ -78,7 +78,7 @@ class BaseDAO(object):
     """
     print('hitting the api to get %s, %s' % (self._entity, feed_item[self._id_field]))
     return self._api().get(
-        profileId=self.profile_id, id=feed_item[self._id_field]).execute()
+        profileId=self.profile_id, id=[feed_item[self._id_field]]).execute()  # wrapped in [] bc "TypeError: 'int' object is not iterable"
 
   def get(self, feed_item, required=False, column_name=None):
     """Retrieves an item.
