@@ -243,6 +243,7 @@ class BaseDAO(object):
 
       if ids:
         for i in range(0, len(ids), 500):
+          print(f"fetching results for IDs {ids[i:i + 500]} for profile {self.profile_id}")
           results = self._api(iterate=True).list(
               profileId=self.profile_id, ids=ids[i:i + 500]).execute()
           for item in results:

@@ -495,7 +495,7 @@ def API_Sheets(config, auth, iterate=False):
   return API(config, api)
 
 
-def API_DCM(config, auth, iterate=True, internal=False):
+def API_DCM(config, auth, iterate=False, internal=False):
   """DCM helper configuration for Google API.
 
   Defines agreed upon version.
