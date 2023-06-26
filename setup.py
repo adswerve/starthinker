@@ -24,11 +24,11 @@ from setuptools import find_packages
 from setuptools import setup
 
 REQUIREMENTS = [
-    'google-api-python-client==2.70.0',  # breaking change noted after release of v2.90.0, v2.70.0 in requirements.txt
-    'google-auth',
+    'google-api-python-client==2.88.0',  # breaking change noted after release of v2.90.0, v2.70.0 in requirements.txt
+    'google-auth==2.19.0',
     'google-auth-oauthlib',
     'google-auth-httplib2',
-    'google-cloud-bigquery==3.10.0',
+    'google-cloud-bigquery==2.34.3',
     'pysftp',
     'pytz',
     'tzlocal',
